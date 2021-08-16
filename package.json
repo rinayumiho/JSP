@@ -1,0 +1,38 @@
+{
+  "name": "JSP",
+  "version": "1.0.0",
+  "description": "Background Everyone loves delicious food but having a healthy meal plain in a day is also important to us. That’s why I am going to build this JavaScript Project about food introduction and recommendation. This Project is a website that provides information about the food all over the world, and the recommendation daily meal plan for users based on their preference.",
+  "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinayumiho/JSP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rinayumiho/JSP/issues"
+  },
+  "homepage": "https://github.com/rinayumiho/JSP#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.16.1",
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.2.0",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0"
+  }
+}

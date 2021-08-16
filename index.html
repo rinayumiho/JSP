@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="./dist/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Food Introduction</h1>
+    <div id="name-selections" class="submit-form">
+        <p>Food Selection</p>
+        <form id="categories">
+            <label for="foods">Choose a food</label>
+            <select name="foods" id="foods">
+                <option value="biryani" selected>Biryani</option>
+                <option value="burger">Burger</option>
+                <option value="butter-chicken">Butter-chicken</option>
+                <option value="dessert">Dessert</option>
+                <option value="dosa">Dosa</option>
+                <option value="idly">Idly</option>
+                <option value="pasta">Pasta</option>
+                <option value="pizza">Pizza</option>
+                <option value="rice">Rice</option>
+                <option value="samosa">Samosa</option>
+            </select>
+            <button id="selection-submit">Get a Picture</button>
+        </form>
+        
+    </div>
+
+    <div id="get-from-api" class="show-picture">
+        <p>Position of Picture</p>
+    </div>
+</body>
+</html>
