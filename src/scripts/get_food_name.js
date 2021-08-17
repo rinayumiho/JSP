@@ -7,4 +7,4 @@ function getFoodName(){
     });
 }
 
-export default getFoodName;
+// export default getFoodName;

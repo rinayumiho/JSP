@@ -10,13 +10,14 @@
 </head>
 <body>
     <h1>Food Introduction</h1>
-    <div id="name-selections" class="submit-form">
-        <p>Food Selection</p>
+    <div id="name-selections">
+        <!--p>Food Selection</p-->
+        <br>
         <form id="categories">
             <label for="foods">Choose a food</label>
             <select name="foods" id="foods">
-                <option value="biryani" selected>Biryani</option>
-                <option value="burger">Burger</option>
+                <option value="biryani">Biryani</option>
+                <option value="burger" selected>Burger</option>
                 <option value="butter-chicken">Butter-chicken</option>
                 <option value="dessert">Dessert</option>
                 <option value="dosa">Dosa</option>
@@ -26,13 +27,18 @@
                 <option value="rice">Rice</option>
                 <option value="samosa">Samosa</option>
             </select>
+            <br>
             <button id="selection-submit">Get a Picture</button>
         </form>
         
     </div>
 
-    <div id="get-from-api" class="show-picture">
+    <div id="picture-show">
         <p>Position of Picture</p>
+    </div>
+
+    <div id="info-show">
+        <p>Nutrients of the food</p>
     </div>
 </body>
 </html>
