@@ -1,9 +1,11 @@
 async function chartNutrients(xLabels, showValues){
-    Chart.defaults.font.size = 20;
+    // Chart.defaults.font.size = 12;
     Chart.defaults.font.family = 'Arial';
     const divNutrients = document.getElementById('nutrients');
     divNutrients.innerHTML = "";
-    const canvas = document.createElement('canvas');;
+    const canvas = document.createElement('canvas');
+    // canvas.setAttribute("width", screen.availWidth);
+    // canvas.setAttribute("height", screen.availHeight);
     const ctx = canvas.getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'bar',
@@ -62,6 +64,12 @@ async function chartNutrients(xLabels, showValues){
                 x: {
                     grid:{
                         display:false
+                    },
+                    ticks: {
+                        font: {
+                            // family: 'Arial',
+                            size: 12,
+                        }
                     }
                 },
                 y: {
@@ -72,6 +80,9 @@ async function chartNutrients(xLabels, showValues){
                         callback: function(value, index, values) {
                             return `${value} g`;
                         },
+                        font:{
+                            size: 12,
+                        }
                     },
                     grid: {
                         display: false
@@ -84,9 +95,9 @@ async function chartNutrients(xLabels, showValues){
                     align: 'end',
                     // backgroundColor: 'gray',
                     font: {
-                        size: 12,
+                        size: 9,
                     },
-                    formatter: (val) => (`${val} g`),
+                    // formatter: (val) => (`${val} g`),
                     labels: {
                         value: {
                             color: 'black',
@@ -97,7 +108,7 @@ async function chartNutrients(xLabels, showValues){
                 legend: {
                     labels: {
                         font: {
-                            size: 30,
+                            size: 14,
                             family: 'sans-serif',
                             weight: 'bold',
                         }

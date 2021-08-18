@@ -11,45 +11,56 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Food Introduction</h1>
-    <div id="results">
-        <div id="name-selections" class="sub-window">
-            <!--p>Food Selection</p-->
-            <br>
-            <form id="categories">
-                <label for="foods">Choose a food</label>
-                <select name="foods" id="foods">
-                    <option value="biryani">Biryani</option>
-                    <option value="burger" selected>Burger</option>
-                    <option value="butter-chicken">Butter-chicken</option>
-                    <option value="dessert">Dessert</option>
-                    <option value="dosa">Dosa</option>
-                    <option value="idly">Idly</option>
-                    <option value="pasta">Pasta</option>
-                    <option value="pizza">Pizza</option>
-                    <option value="rice">Rice</option>
-                    <option value="samosa">Samosa</option>
-                </select>
-                <br>
-                <button id="selection-submit">Submit</button>
-            </form>
+    <h1>Food Nutrition Analysis</h1>
+    <div id="main">
+        <div id="results" class="outer">
+        
+    
+            <div id="picture-show" class="sub-window"></div>
+        
+            <div id="calories" class="sub-window"></div>
+    
             
         </div>
     
-        <div id="picture-show" class="sub-window">
-            <p>Position of Picture</p>
+        <div id="graphs" class="outer">
+            <div id="nutrients" class="sub-window"></div>
+    
+            <div id="contents" class="sub-window"></div>
         </div>
     
-        <div id="info-show" class="sub-window">
-            <p>Nutrients of the food</p>
-        </div>
 
+    </div>
+    
+    <div id="name-selections">
+        <!--p>Food Selection</p-->
+        <br>
+        <form id="categories">
+            <select name="foods" id="foods">
+                <option value="biryani">Biryani</option>
+                <option value="burger" selected>Burger</option>
+                <option value="butter-chicken">Butter-chicken</option>
+                <option value="dessert">Dessert</option>
+                <option value="dosa">Dosa</option>
+                <option value="idly">Idly</option>
+                <option value="pasta">Pasta</option>
+                <option value="pizza">Pizza</option>
+                <option value="rice">Rice</option>
+                <option value="samosa">Samosa</option>
+            </select>
+            <button id="selection-submit">Submit</button>
+        </form>
         
     </div>
+    <br>
+    <div id="links">
+        <p class="indent">Author: Long Chen            </p>
+        <a href="https://www.linkedin.com/in/long-chen-5153a31b7/"><img src="src/assets/LinkedIn-logo.png" alt="LinkedIn" width="40px"></a>
+        <a href="https://github.com/rinayumiho"><img src="src/assets/github.jpg" alt="github" width="45px"></a>
+    </div>
 
-    <div id="nutrients"></div>
-
-    <div id="contents"></div>
+    
+    
 
 </body>
 </html>

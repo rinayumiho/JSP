@@ -3,7 +3,7 @@ async function chartContents(materials, mostFiveContents){
     mostFiveContents.forEach(ele => {
         dict[ele] = materials[ele];
     });
-    Chart.defaults.font.size = 20;
+    Chart.defaults.font.size = 14;
     Chart.defaults.font.family = 'Arial';
     const divContents = document.getElementById('contents');
     divContents.innerHTML = "";
@@ -20,7 +20,9 @@ async function chartContents(materials, mostFiveContents){
                     backgroundColor: [
                         'rgb(255, 99, 132)',
                         'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)'
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(153, 102, 255)',
                     ],
                     hoverOffset: 4,
                 }

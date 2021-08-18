@@ -50,8 +50,6 @@ async function getFoodData(foodName){
     
     console.log(`After put some stuff, data is: ${data}`);
     // debugger
-    const div = document.getElementById('info-show');
-    div.innerHTML = "";
 
     const showValues = {};
     showValues["min"] = [];
@@ -61,49 +59,63 @@ async function getFoodData(foodName){
 
     const xLabels = [];
     for(const [key, val] of Object.entries(data)){
-        const unit = "g";
-        if(key === "Calories"){
-            unit = "kcal";
-        }
-        const ul = document.createElement('ul');
-        ul.textContent = `${key} (${unit})`
+        // const unit = "g";
+        // if(key === "Calories"){
+        //     unit = "kcal";
+        // }
+        // const ul = document.createElement('ul');
+        // ul.textContent = `${key} (${unit})`
 
         xLabels.push(key);
 
         const maxValue = Math.max(...val).toFixed(2).toString();
-        const li1 = document.createElement('li');
-        li1.textContent = `Max: ${maxValue}`
-        ul.appendChild(li1);
+        // const li1 = document.createElement('li');
+        // li1.textContent = `Max: ${maxValue}`
+        // ul.appendChild(li1);
         showValues["max"].push(parseFloat(maxValue));
 
         const minValue = Math.min(...val).toFixed(2).toString();
-        const li2 = document.createElement('li');
-        li2.textContent = `Min: ${minValue}`
-        ul.appendChild(li2);
+        // const li2 = document.createElement('li');
+        // li2.textContent = `Min: ${minValue}`
+        // ul.appendChild(li2);
         showValues["min"].push(parseFloat(minValue));
 
         const aveValue = arrayAve(val);
-        const li3 = document.createElement('li');
-        li3.textContent = `Average: ${aveValue}`
-        ul.appendChild(li3);
+        // const li3 = document.createElement('li');
+        // li3.textContent = `Average: ${aveValue}`
+        // ul.appendChild(li3);
         showValues["ave"].push(parseFloat(aveValue));
 
         const medValue = arrayMed(val);
-        const li4 = document.createElement('li');
-        li4.textContent = `Median: ${medValue}`
-        ul.appendChild(li4);
+        // const li4 = document.createElement('li');
+        // li4.textContent = `Median: ${medValue}`
+        // ul.appendChild(li4);
         showValues["med"].push(parseFloat(medValue));
 
-        div.appendChild(ul);
+        // div.appendChild(ul);
     }
-    const mostFiveContents = getMostFiveContents(materials);
-    const p1 = document.createElement('p');
-    p1.textContent = "5 most frequently used contents:";
-    div.appendChild(p1);
+    const calories = document.getElementById('calories');
+    calories.innerHTML = "";
+    const name = document.createElement('h2');
+    const caloriesTitle = document.createElement('p');
+    const caloriesValue = document.createElement('p');
+    name.textContent = foodName.charAt(0).toUpperCase() + foodName.slice(1);
+    caloriesTitle.textContent = `Calories: ${showValues["min"][0]} ~ ${showValues["max"][0]} kcal`;
+    caloriesValue.textContent = `5 most frequently used contents:`;
+    calories.appendChild(name);
+    calories.appendChild(caloriesTitle);
+    calories.appendChild(document.createElement('br'));
+    calories.appendChild(caloriesValue);
 
-    const p2 = document.createElement('p');
-    p2.textContent = mostFiveContents.join(", ");
-    div.appendChild(p2);
+
+    const mostFiveContents = getMostFiveContents(materials);
+    // const p1 = document.createElement('p');
+    // p1.textContent = "5 most frequently used contents:";
+    // div.appendChild(p1);
+
+    // const p2 = document.createElement('p');
+    // p2.textContent = mostFiveContents.join(", ");
+    // div.appendChild(p2);
 
     chartNutrients(xLabels, showValues);
     chartContents(materials, mostFiveContents);
