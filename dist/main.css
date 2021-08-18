@@ -7,7 +7,7 @@ h1 {
 }
 
 body {
-    background-image: url("src/assets/food-background.jpg");
+    background-image: url("/src/assets/food-background.jpg");
     background-color: #cccccc;
     background-size: 100%;
     /* background-repeat:repeat-y; */
@@ -18,7 +18,7 @@ body {
 }
 
 #main {
-    background: url("src/assets/question_mark.jpg") center center no-repeat;
+    background: url("/src/assets/question_mark.jpg") center center no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
