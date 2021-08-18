@@ -26,6 +26,7 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "babel-loader": "^8.2.2",
+    "chartjs-plugin-datalabels": "^2.0.0",
     "core-js": "^3.16.1",
     "css-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.2.0",
