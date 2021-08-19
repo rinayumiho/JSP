@@ -4,7 +4,7 @@ import getMostFiveContents from "./get_most_five_contents";
 import chartNutrients from "./chart_nutrients";
 import chartContents from "./chart_contents";
 
-async function getFoodData(foodName){
+async function getFoodData(foodName, nameLinks){
     const api_url = "https://api.edamam.com/api/food-database/v2/parser?app_id=";
     const app_id = "c23279bf";
     const app_key = "bc1520f2990225fa3bdd349a5b10b459";
@@ -18,8 +18,8 @@ async function getFoodData(foodName){
     data["Fat"] = [];
     data["Carbohydrates"] = [];
     data["Fiber"] = [];
-    console.log(data);
     const materials = {};
+
     jsonData.hints.forEach(ele => {
         if(ele.food.nutrients.ENERC_KCAL != undefined && ele.food.nutrients.ENERC_KCAL != "0"){
             data["Calories"].push(parseFloat(ele.food.nutrients.ENERC_KCAL));
@@ -96,14 +96,18 @@ async function getFoodData(foodName){
     }
     const calories = document.getElementById('calories');
     calories.innerHTML = "";
-    const name = document.createElement('h2');
+    const nameLink = document.createElement('a');
+    nameLink.appendChild(document.createTextNode(foodName.charAt(0).toUpperCase() + foodName.slice(1)));
+    nameLink.href = nameLinks[foodName];
+    nameLink.setAttribute("target", "_blank"); 
     const caloriesTitle = document.createElement('p');
     const caloriesValue = document.createElement('p');
-    name.textContent = foodName.charAt(0).toUpperCase() + foodName.slice(1);
     caloriesTitle.textContent = `Calories: ${showValues["min"][0]} ~ ${showValues["max"][0]} kcal`;
     caloriesValue.textContent = `5 most frequently used contents:`;
-    calories.appendChild(name);
+    caloriesValue.setAttribute("id", "title");
+    calories.appendChild(nameLink);
     calories.appendChild(caloriesTitle);
+    calories.appendChild(document.createElement('br'));
     calories.appendChild(document.createElement('br'));
     calories.appendChild(caloriesValue);
 

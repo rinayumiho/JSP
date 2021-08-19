@@ -4,8 +4,6 @@ async function chartNutrients(xLabels, showValues){
     const divNutrients = document.getElementById('nutrients');
     divNutrients.innerHTML = "";
     const canvas = document.createElement('canvas');
-    // canvas.setAttribute("width", screen.availWidth);
-    // canvas.setAttribute("height", screen.availHeight);
     const ctx = canvas.getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'bar',
@@ -63,12 +61,13 @@ async function chartNutrients(xLabels, showValues){
             scales: {
                 x: {
                     grid:{
-                        display:false
+                        display:false,
                     },
                     ticks: {
                         font: {
-                            // family: 'Arial',
+                            family: "Helvetica",
                             size: 12,
+                            weight: "bold",
                         }
                     }
                 },
