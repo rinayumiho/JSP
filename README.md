@@ -1,3 +1,5 @@
+[Live Demo](https://rinayumiho.github.io/Food-Nutrition-Analysis/)
+
 Background
 Everyone loves delicious food. Today people would like to know what they actually eat in order to keep healthy. That’s why I am going to build this JavaScript Project about food nutrition analysis. This Project is a website that provides nutrition information about some representative food with a corresponding random food picture.
 
