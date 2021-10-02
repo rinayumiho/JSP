@@ -84,11 +84,16 @@ body {
 
 #links {
     display: flex;
-    justify-content: stretch;
+    /* justify-content: stretch; */
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    width: 40%;
 }
 
 p.indent{
     padding-right: 4em;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #calories a {
