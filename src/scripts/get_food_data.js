@@ -9,7 +9,7 @@ async function getFoodData(foodName, nameLinks){
     const app_id = "c23279bf";
     const app_key = "bc1520f2990225fa3bdd349a5b10b459";
     const url = api_url + app_id + "&app_key=" + app_key + "&ingr=" + foodName;
-    console.log(url);
+
     const rawData = await fetch(url);
     const jsonData = await rawData.json();
     const data = {};
@@ -48,7 +48,6 @@ async function getFoodData(foodName, nameLinks){
         }
     });
     
-    console.log(`After put some stuff, data is: ${data}`);
     // debugger
 
     const showValues = {};

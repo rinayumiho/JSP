@@ -4,7 +4,6 @@ import getFoodData from "./scripts/get_food_data";
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  console.log("Hello World");
   let foodName = "";
   const nameForm = document.getElementById('categories');
   const links = {
