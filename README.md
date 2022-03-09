@@ -12,7 +12,6 @@ The website has the following features:
 * Each time clicked a random food picture will be present.
 * The nutrition information includes calories, protein, fat, carbohydrates and fiber. 
 * The 5 most frequently used contents of the food will be present.
-* Allow users to register to save and review the information they searched (bonus).
 
 ## Wirefames
 
